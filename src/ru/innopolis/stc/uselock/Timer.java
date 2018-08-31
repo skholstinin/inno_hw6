@@ -8,8 +8,8 @@ public class Timer {
     private String msg;
     private long startTime;
 
-    public Timer(int n, String msg, long startTime) {
-        cntSec = n;
+    public Timer(int second, String msg, long startTime) {
+        this.cntSec = second;
         this.msg = msg;
         this.startTime = startTime;
     }

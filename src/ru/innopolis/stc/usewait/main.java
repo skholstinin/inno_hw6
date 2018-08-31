@@ -16,12 +16,9 @@ package ru.innopolis.stc.usewait;
 
 public class main {
     public static void main(String[] args) {
-        Timer timerOneSec;
-        timerOneSec = new Timer(1, "Hello Innopolis", System.currentTimeMillis());
-        Timer timerFiveSec;
-        timerFiveSec = new Timer(5, "Hello Kazan", System.currentTimeMillis());
-        Timer timerSevenSec;
-        timerSevenSec = new Timer(7, "Hello Russian", System.currentTimeMillis());
+        Timer timerOneSec = new Timer(1, "Hello Innopolis", System.currentTimeMillis());
+        Timer timerFiveSec = new Timer(5, "Hello Kazan", System.currentTimeMillis());
+        Timer timerSevenSec = new Timer(7, "Hello Russian", System.currentTimeMillis());
         new TimerThread(timerOneSec).start();
         new MsgThread(timerOneSec).start();
         new TimerThread(timerFiveSec).start();

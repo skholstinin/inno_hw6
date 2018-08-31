@@ -19,14 +19,14 @@ import java.util.concurrent.locks.ReentrantLock;
 public class main {
     public static void main(String[] args) {
         ReentrantLock locker = new ReentrantLock();
-        Timer timerOneSec1 = new Timer(1, "Hello Innopolis", System.currentTimeMillis());
-        Timer timerFiveSec1 = new Timer(5, "Hello Kazan", System.currentTimeMillis());
-        Timer timerSevenSec1 = new Timer(7, "Hello Russian", System.currentTimeMillis());
-        new TimerThread(timerOneSec1, locker).start();
-        new MsgThread(timerOneSec1, locker).start();
-        new TimerThread(timerFiveSec1, locker).start();
-        new MsgThread(timerFiveSec1, locker).start();
-        new TimerThread(timerSevenSec1, locker).start();
-        new MsgThread(timerSevenSec1, locker).start();
+        Timer timerOneSec = new Timer(1, "Hello Innopolis", System.currentTimeMillis());
+        Timer timerFiveSec = new Timer(5, "Hello Kazan", System.currentTimeMillis());
+        Timer timerSevenSec = new Timer(7, "Hello Russian", System.currentTimeMillis());
+        new TimerThread(timerOneSec, locker).start();
+        new MsgThread(timerOneSec, locker).start();
+        new TimerThread(timerFiveSec, locker).start();
+        new MsgThread(timerFiveSec, locker).start();
+        new TimerThread(timerSevenSec, locker).start();
+        new MsgThread(timerSevenSec, locker).start();
     }
 }

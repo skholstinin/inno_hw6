@@ -6,8 +6,8 @@ public class MsgThread extends Thread {
     private Timer timer;
     private ReentrantLock locker;
 
-    public MsgThread(Timer s, ReentrantLock locker) {
-        timer = s;
+    public MsgThread(Timer timer, ReentrantLock locker) {
+        this.timer = timer;
         this.locker = locker;
     }
 

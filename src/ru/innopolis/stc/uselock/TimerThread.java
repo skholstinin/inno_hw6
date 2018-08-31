@@ -6,8 +6,8 @@ public class TimerThread extends Thread {
     private Timer timer;
     private ReentrantLock locker;
 
-    public TimerThread(Timer s, ReentrantLock locker) {
-        timer = s;
+    public TimerThread(Timer timer, ReentrantLock locker) {
+        this.timer = timer;
         this.locker = locker;
     }
 

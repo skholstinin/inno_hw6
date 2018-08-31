@@ -1,16 +1,16 @@
 package ru.innopolis.stc.usewait;
 
 public class MsgThread extends Thread {
-    private Timer t;
+    private Timer timer;
 
-    public MsgThread(Timer s) {
-        t = s;
+    public MsgThread(Timer timer) {
+        this.timer = timer;
     }
 
     public void run() {
         try {
             for (; ; ) {
-                t.printMsg();
+                timer.printMsg();
             }
         } catch (InterruptedException e) {
             return;
